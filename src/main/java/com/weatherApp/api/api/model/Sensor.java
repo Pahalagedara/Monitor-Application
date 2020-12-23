@@ -1,13 +1,16 @@
 package com.weatherApp.api.api.model;
 
+
+import org.springframework.data.annotation.Id;
+
 public class Sensor {
-    private String id;
+    @Id private String id;
     private String sensorId;
     private String timeStamp;
     private String value;
 
-    public Sensor(String id, String sensorId, String timeStamp, String value) {
-        this.id = id;
+    public Sensor(String sensorId, String timeStamp, String value) {
+
         this.sensorId = sensorId;
         this.timeStamp = timeStamp;
         this.value = value;
